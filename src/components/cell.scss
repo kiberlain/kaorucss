@@ -10,6 +10,7 @@ $c-cell-offset-sides: right, left;
     flex-basis: 100%;
     position: relative;
     padding: $g-gutter-size;
+    flex: 1;
 }
 
 .#{$g-cell-name}--hidden {

@@ -310,7 +310,10 @@ body {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   position: relative;
-  padding: 0.5rem; }
+  padding: 0.5rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1; }
 
 .cell--hidden {
   display: none; }
