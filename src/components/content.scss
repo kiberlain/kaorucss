@@ -3,4 +3,5 @@
     margin: 0 auto;
     position: relative;
     max-width: calc(#{$g-content-width} + (#{$g-gutter-size} * 2));
+    padding: 0 1rem;
 }
