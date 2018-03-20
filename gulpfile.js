@@ -14,17 +14,17 @@ gulp.task('build-dev', function() {
     .pipe(sass().on('error', sass.logError))
     .pipe(rename('kaoru.css'))
     .pipe(postcss(processors))
-    .pipe(gulp.dest('./bin'));
+    .pipe(gulp.dest('./dist'));
 });
 
 gulp.task('build-prod', ['build-dev'], function() {
   return gulp
-    .src('./bin/kaoru.css')
+    .src('./dist/kaoru.css')
     .pipe(stripCssComments({ preserve: false }))
     .pipe(postcss(processors))
     .pipe(cssmin())
     .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest('./bin'));
+    .pipe(gulp.dest('./dist'));
 });
 
 gulp.task('build', ['build-dev', 'build-prod']);
