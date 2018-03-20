@@ -12,14 +12,14 @@ gulp.task('build-dev', function() {
   return gulp
     .src('./src/index.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(rename('buzuki.css'))
+    .pipe(rename('kaoru.css'))
     .pipe(postcss(processors))
     .pipe(gulp.dest('./bin'));
 });
 
 gulp.task('build-prod', ['build-dev'], function() {
   return gulp
-    .src('./bin/buzuki.css')
+    .src('./bin/kaoru.css')
     .pipe(stripCssComments({ preserve: false }))
     .pipe(postcss(processors))
     .pipe(cssmin())

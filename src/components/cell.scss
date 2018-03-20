@@ -29,7 +29,7 @@ $c-cell-offset-sides: right, left;
 }
 
 @for $_i from 1 through $g-column-count {
-    .#{$g-cell-name}--#{$_i}\/#{$g-column-count} {
+    .#{$g-cell-name}--#{$_i} {
         width: width($_i);
         max-width: width($_i);
         flex-basis: width($_i);
@@ -38,30 +38,31 @@ $c-cell-offset-sides: right, left;
 
 @each $_side in $c-cell-offset-sides {
     @for $_i from 1 through $g-column-count {
-        .#{$g-cell-name}--offset-#{$_side}-#{$_i}\/#{$g-column-count} {
+        .#{$g-cell-name}--offset-#{$_side}-#{$_i} {
             margin-#{$_side}: width($_i);
         }
     }
 }
 
 @each $_alignment in $c-cell-alignments {
-    .#{$g-cell-name}--align-#{$_alignment} {
+    .#{$g-cell-name}--text-align-#{$_alignment} {
         text-align: $_alignment;
     }
 }
 
 @each $_label, $_ in $g-viewports {
     @include viewport-min($_label) {
-        .#{$g-cell-name}--hidden\@#{$_label} {
+        .#{$g-cell-name}--#{$_label}-hidden {
             display: none;
         }
 
-        .#{$g-cell-name}--visible\@#{$_label} {
+        .#{$g-cell-name}--#{$_label}-visible {
             display: block;
         }
 
+
         @for $_i from 1 through $g-column-count {
-            .#{$g-cell-name}--#{$_i}\/#{$g-column-count}\@#{$_label} {
+            .#{$g-cell-name}--#{$_label}-#{$_i} {
                 width: width($_i);
                 max-width: width($_i);
                 flex-basis: width($_i);
@@ -70,19 +71,19 @@ $c-cell-offset-sides: right, left;
 
         @each $_side in $c-cell-offset-sides {
             @for $_i from 1 through $g-column-count {
-                .#{$g-cell-name}--offset-#{$_side}-#{$_i}\/#{$g-column-count}\@#{$_label} {
+                .#{$g-cell-name}--#{$_label}-offset-#{$_side}-#{$_i} {
                     margin-#{$_side}: width($_i);
                 }
             }
         }
 
         @each $_alignment in $c-cell-alignments {
-            .#{$g-cell-name}--align-#{$_alignment}\@#{$_label} {
+            .#{$g-cell-name}--#{$_label}-text-align-#{$_alignment} {
                 text-align: $_alignment;
             }
         }
 
-        .#{$g-cell-name}--has-rows > .Row--gutterless\@#{$_label} {
+        .#{$g-cell-name}--has-rows > .row--#{$_label}-gutterless {
             padding: 0;
         }
     }

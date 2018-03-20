@@ -1,10 +1,10 @@
 {
-  "name": "buzuki",
-  "version": "1.0.1",
-  "description": "A mobile-first, responsive BEM flavoured flexbox css grid system",
+  "name": "kaoru",
+  "version": "0.0.1",
+  "description": "Простая сетка, типографика и кнопки для домашнего использования",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/enzyme/buzuki.git"
+    "url": "git+https://github.com/kiberlain/kaorucss.git"
   },
   "keywords": [
     "bem",
@@ -12,12 +12,12 @@
     "css",
     "grid"
   ],
-  "author": "Tristan Strathearn",
-  "license": "MIT",
+  "author": "Курницкий Андрей",
+  "license": "Free",
   "bugs": {
-    "url": "https://github.com/enzyme/buzuki/issues"
+    "url": "https://github.com/kiberlain/kaorucss/issues"
   },
-  "homepage": "https://github.com/enzyme/buzuki#readme",
+  "homepage": "https://github.com/kiberlain/kaorucss#readme",
   "devDependencies": {
     "autoprefixer": "^7.1.2",
     "gulp": "^3.9.1",

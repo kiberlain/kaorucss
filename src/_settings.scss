@@ -1,11 +1,11 @@
 $g-debug: false !default;
 
-$g-row-name: 'Row' !default;
-$g-cell-name: 'Cell' !default;
-$g-content-name: 'Content' !default;
+$g-row-name: 'row' !default;
+$g-cell-name: 'cell' !default;
+$g-content-name: 'container' !default;
 
 $g-column-count: 12 !default;
-$g-gutter-size: 1rem !default;
+$g-gutter-size: 0.5rem !default;
 $g-content-width: 75rem !default;
 $g-ie-width-correction: 0.0001 !default;
 
